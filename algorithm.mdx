@@ -1,0 +1,42 @@
+# Algorithmic Scoring System
+
+Pump Guard uses a transparent, metric-based scoring framework to surface risk and integrity signals. Each metric maps on-chain patterns to a normalized score, then aggregates into a composite risk score.
+
+## Scoring Principles
+
+- Metric signs:
+  - [+] Positive metric: starts at 0%, improves toward 100%
+  - [-] Negative metric: starts at 100%, decreases toward 0%
+- Normalization: all metrics mapped to 0–100 for comparability
+- Weights: configurable per profile (retail, pro, platform)
+- Output: per‑metric scores + aggregate score with badges
+
+## Example Metrics
+
+### [+] Total Native Balance (Top-50 Holders)
+
+- Idea: If a token has migrated to pump AMM, healthy holders usually keep meaningful native SOL balances.
+- Observation: Scam/farming tokens often have top wallets with very low native SOL (e.g., 40–100 SOL total across top-50), while healthier sets exceed 1,000+ SOL total.
+- Score: min 0, max 100 (internally capped to prevent outliers). Also exposed as a raw value cap (e.g., 5,000) for dashboards.
+
+### [-] Fresh Wallets Concentration
+
+- Idea: Recently created wallets among top holders increase manipulation risk.
+- Rule of thumb: If the sum of ownership by 7 day old wallets in top‑50 exceeds ~5%, risk is elevated.
+- Score: min 0, max 100; decreases as the fresh-wallet share grows.
+
+### [-] Zero-SOL Holders (Top-50)
+
+- Idea: Bots often spend all SOL when entering, leaving zero native SOL as a red flag.
+- Method: Count wallets with native SOL == 0 among top‑50; multiply by a factor (e.g., ×2) to derive penalty.
+- Score: penalty toward 0; best case is zero zero-SOL wallets.
+
+## Interpretability
+
+- Each token page shows:
+  - Metric cards with [+]/[-] badges
+  - Raw values and normalized scores
+  - Short rationale and thresholds
+  - Overall risk badge (Low / Medium / High)
+
+> Disclaimer: Pump Guard is not financial advice. It provides data-driven signals to improve decision-making.

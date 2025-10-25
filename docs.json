@@ -28,8 +28,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/pump_guard_logo.png",
+    "dark": "/logo/pump_guard_logo.png"
   },
   "navbar": {
     "links": [

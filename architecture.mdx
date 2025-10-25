@@ -1,22 +1,25 @@
 ---
 title: "Architecture"
-description: "Modular, real-time pipeline on Solana: high-RPS RPC, gRPC streams, indexing, caching, and a transparent risk-scoring engine."
+description: "High-RPS RPC, gRPC streams, indexing, queue, caching, and a transparent risk-scoring engine."
 ---
 
 Pump Guard is a modular, real-time analysis pipeline built for Solana’s throughput. It ingests holder sets, wallet ages, native SOL balances, token balances, and price/liquidity via high‑RPS RPC and gRPC streams, then computes transparent risk metrics.
 
 ## Components
+
 - Frontend: token lookup, shareable risk reports, per‑metric breakdowns
 - Backend: ingestion/indexing, batched RPC, queues/rate limits, scoring
 - Infra: high‑RPS RPC, Yellowstone/Laserstream gRPC, caching and snapshot storage
 - Engine: metric registry, 0–100 normalization, weighted aggregate score
 
 ## Behavior Under Load
+
 - High‑RPS RPC → low latency
 - If constrained: queue + rate limit → slower but correct (no data loss)
 - Caching: LRU + snapshots for fast reads and historical diffs
 
 ## Notes
+
 - Current release is a DEMO due to limited infra/time; open-source by design
 - Cloning with high‑RPS RPC + Yellowstone/Laserstream + solid indexing/caching enables stronger metrics
 - Rug Checker v4 (closed-source) will extend Pump Guard with industrial features

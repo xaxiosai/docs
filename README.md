@@ -1,43 +1,17 @@
-# Mintlify Starter Kit
+# Introduction
 
-Use the starter kit to get your docs deployed and ready to customize.
+> What Is Pump Guard & Why Was It Built?
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+In the fast-moving world of Web3 and DeFi, hundreds of new tokens are launched every day.\
+On **Solana**, platforms like **pump.fun** have revolutionized decentralized trading by letting anyone create and trade tokens in minutes.
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+However, this open and permissionless design has also created a new wave of threats — **rug pulls** and **farming manipulation schemes** — that exploit social hype and liquidity patterns to deceive traders.
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+**Pump Guard** was born out of a simple question:\
+*How can we protect traders and builders from hidden manipulation without limiting innovation?*
 
-## Development
+Pump Guard is an **open-source security layer** designed to detect scam-like behaviors, analyze wallet and liquidity patterns, and generate a **risk-based transparency score** for any token on pump.fun.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+Instead of predicting price movements, Pump Guard focuses on **data-driven safety**, helping traders, investors, and developers better understand what happens *behind the chart.*
 
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
-```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+Beyond being just an analytic tool, Pump Guard aims to bring accountability to the meme‑coin and community‑driven ecosystems — empowering honest projects to stand out while exposing exploitative ones.

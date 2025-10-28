@@ -40,7 +40,7 @@ Visit [pumpguard.xaxios.com](https://pumpguard.xaxios.com) and paste any Solana 
 
 ## Open Source
 
-Everything is public on [GitHub](https://github.com/xaxios/pump-guard-monorepo). You can verify our code, run your own instance, or contribute improvements.
+Everything is public on [GitHub](https://github.com/xaxiosai/pump-guard-monorepo). You can verify our code, run your own instance, or contribute improvements.
 
 Our mission is simple: **bring transparency to meme coins and help honest projects succeed**.
 

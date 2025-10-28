@@ -8,12 +8,14 @@ Pump Guard is built as a lightweight, modular system that analyzes tokens in rea
 ## System Components
 
 ### Frontend (React + Vite)
+
 - Token search and address validation
 - Live risk reports with visual metrics
 - Real-time updates via WebSockets
 - Recent scans tracking with local storage
 
 ### Backend (Node.js + Express)
+
 - REST API for token analysis
 - Solana RPC integration for blockchain data
 - DexScreener API for market data
@@ -21,6 +23,7 @@ Pump Guard is built as a lightweight, modular system that analyzes tokens in rea
 - Socket.io for live updates
 
 ### Infrastructure
+
 - **Solana RPC**: Fetches holder balances and wallet history
 - **Redis**: Caches wallet data (24h) and risk scores (15s)
 - **WebSockets**: Broadcasts scan events to all connected users
@@ -38,16 +41,19 @@ Pump Guard is built as a lightweight, modular system that analyzes tokens in rea
 ## Performance Strategy
 
 **Caching**:
+
 - Wallet creation data cached 24 hours (rarely changes)
 - Risk scores cached 15 seconds (balance between freshness and speed)
 - Token metadata cached indefinitely (immutable)
 
 **Rate Limiting**:
+
 - 2 requests per second per IP
 - 10 requests per 15 seconds
 - 30 requests per minute
 
 **Real-time Updates**:
+
 - Socket.io broadcasts new scans globally
 - Homepage shows community scan activity live
 - No page refresh needed
@@ -55,6 +61,7 @@ Pump Guard is built as a lightweight, modular system that analyzes tokens in rea
 ## Tech Stack
 
 **Backend**:
+
 - Express.js + TypeScript
 - @solana/web3.js for blockchain
 - Redis (ioredis) for caching
@@ -62,6 +69,7 @@ Pump Guard is built as a lightweight, modular system that analyzes tokens in rea
 - Axios for external APIs
 
 **Frontend**:
+
 - React 18 + TypeScript
 - Vite for fast builds
 - Tailwind CSS for styling
@@ -70,7 +78,7 @@ Pump Guard is built as a lightweight, modular system that analyzes tokens in rea
 
 ## Open Source
 
-The entire codebase is open source on [GitHub](https://github.com/xaxios/pump-guard-monorepo):
+The entire codebase is open source on [GitHub](https://github.com/xaxiosai/pump-guard-monorepo):
 
 - Full backend and frontend code
 - Deployment configurations

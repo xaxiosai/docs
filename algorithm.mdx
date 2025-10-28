@@ -64,7 +64,7 @@ Every token you scan on [pumpguard.xaxios.com](https://pumpguard.xaxios.com) get
 
 ## Open Source
 
-All our scoring code is public on [GitHub](https://github.com/xaxios/pump-guard-monorepo). You can verify exactly how we calculate risk.
+All our scoring code is public on [GitHub](https://github.com/xaxiosai/pump-guard-monorepo). You can verify exactly how we calculate risk.
 
 ---
 

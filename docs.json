@@ -41,8 +41,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Telegram",
-      "href": "https://t.me/xaxiosaiportal"
+      "label": "Website",
+      "href": "https://pumpguard.xaxios.com"
     }
   },
   "contextual": {

@@ -35,8 +35,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:info@xaxios.com"
+        "label": "Github",
+        "href": "https://github.com/xaxiosai/pump-guard-monorepo"
       }
     ],
     "primary": {
